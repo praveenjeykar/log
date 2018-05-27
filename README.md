@@ -7,7 +7,7 @@
 - virtual box
 ## set up
 - Install Vagrant and VirtualBox
-- Download the sql file from udacity.
+- Download the database setup: data
 - Unzip the downloaded file after downloading it. The file inside is called newsdata.sql.
 - Dump the data inside the sql file into our news database.
 ## Launching the virtual machine
