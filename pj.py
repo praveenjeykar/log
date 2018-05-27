@@ -6,7 +6,6 @@ db_name = "news"
 
 
 def query_pj(query):
-    
     conn = psycopg2.connect('dbname=' + db_name)
     cursor = conn.cursor()
     cursor.execute(query)
@@ -16,8 +15,7 @@ def query_pj(query):
 
 
 def top_three_articles():
-    
-# query 1: What are the three most popular articles of all time?
+    # query 1: What are the three most popular articles of all time?
 
     query = """
         select articles.title, count(*) as num
@@ -41,8 +39,7 @@ def top_three_articles():
 
 
 def top_three_authors():
-    
-# query 2: Who are the most popular article authors of all time?
+    # query 2: Who are the most popular article authors of all time?
 
     query = """
         select authors.name, count(*) as num
@@ -68,8 +65,7 @@ def top_three_authors():
 
 
 def error_days():
-    
-# query 3: On which day did more than 1% of requests lead to errors?
+    # query 3: On which day did more than 1% of requests lead to errors?
 
     query = """
         select total.day,
@@ -96,7 +92,9 @@ def error_days():
 # printing outcomes
     print('\ndays with more than 1% errors:')
     for a in outcome:
-        print(a[0].strftime('%B %d, %Y') + " -- " + str(round(a[1]*100, 1)) + "%" + " errors")
+        err = str(round(a[1]*100, 1)) + "%" + " errors"
+        dur = a[0].strftime('%B %d, %Y')
+        print(dur + " -- " + err)
 
 print('\nfetching the results..')
 top_three_articles()
