@@ -7,7 +7,7 @@
 - virtual box
 ## set up
 - Install Vagrant and VirtualBox
-- Download the database setup: data
+- Download the database setup: https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip
 - Unzip the downloaded file after downloading it. The file inside is called newsdata.sql.
 - Dump the data inside the sql file into our news database.
 ## Launching the virtual machine
